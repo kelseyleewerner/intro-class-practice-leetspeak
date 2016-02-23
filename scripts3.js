@@ -1,5 +1,5 @@
 var leetSpeak = function(leet) {
-  if ((leet === "e")||(leet === "E")) {
+  if (leet === "e") {
   return true;
 } else {
   return false;
@@ -12,10 +12,12 @@ $(document).ready(function() {
     var leet = $("input#inputText").val();
     var result = leetSpeak(leet);
 
-    if (result) {
-      $("#result").text("3");
-    } else {
-      alert("Type e's");
+    if (result === true) {
+      $(".answer").text("3");
+    }
+
+    else {
+      $(".answer").text("");
     }
 
     $("#result").show();
